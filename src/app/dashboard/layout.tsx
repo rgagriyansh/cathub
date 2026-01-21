@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import DashboardNav from '@/components/DashboardNav'
+import FeedbackButton from '@/components/FeedbackButton'
 
 export default async function DashboardLayout({
   children,
@@ -20,6 +21,7 @@ export default async function DashboardLayout({
       <main className="pt-20">
         {children}
       </main>
+      <FeedbackButton />
     </div>
   )
 }

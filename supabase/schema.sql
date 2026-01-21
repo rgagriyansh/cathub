@@ -188,3 +188,51 @@ CREATE TRIGGER update_profile_shares_updated_at
   BEFORE UPDATE ON profile_shares
   FOR EACH ROW
   EXECUTE FUNCTION update_updated_at_column();
+
+-- Feedback table for bug reports and feature requests
+CREATE TABLE IF NOT EXISTS feedback (
+  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  user_id UUID REFERENCES auth.users(id) ON DELETE SET NULL,
+  
+  -- Feedback details
+  type VARCHAR(20) NOT NULL CHECK (type IN ('bug', 'feature', 'general')),
+  message TEXT NOT NULL,
+  email VARCHAR(255),
+  
+  -- Context
+  page_url TEXT,
+  user_agent TEXT,
+  
+  -- Status tracking (for admin)
+  status VARCHAR(20) DEFAULT 'new' CHECK (status IN ('new', 'reviewed', 'resolved', 'closed')),
+  admin_notes TEXT,
+  
+  -- Timestamps
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Index for feedback queries
+CREATE INDEX IF NOT EXISTS idx_feedback_user_id ON feedback(user_id);
+CREATE INDEX IF NOT EXISTS idx_feedback_type ON feedback(type);
+CREATE INDEX IF NOT EXISTS idx_feedback_status ON feedback(status);
+CREATE INDEX IF NOT EXISTS idx_feedback_created_at ON feedback(created_at DESC);
+
+-- Enable RLS for feedback
+ALTER TABLE feedback ENABLE ROW LEVEL SECURITY;
+
+-- Anyone can insert feedback (even anonymous users)
+CREATE POLICY "Anyone can submit feedback" 
+  ON feedback FOR INSERT 
+  WITH CHECK (true);
+
+-- Users can view their own feedback
+CREATE POLICY "Users can view their own feedback" 
+  ON feedback FOR SELECT 
+  USING (auth.uid() = user_id);
+
+-- Trigger for updated_at
+CREATE TRIGGER update_feedback_updated_at
+  BEFORE UPDATE ON feedback
+  FOR EACH ROW
+  EXECUTE FUNCTION update_updated_at_column();
