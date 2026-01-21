@@ -1,7 +1,6 @@
 'use client'
 
 import { WorkExperience } from '@/types/profile'
-import { v4 as uuidv4 } from 'crypto'
 
 interface Props {
   data: WorkExperience[]
