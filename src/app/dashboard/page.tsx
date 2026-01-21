@@ -108,6 +108,28 @@ export default async function DashboardPage() {
           </span>
         </Link>
 
+        {/* Reddit Card */}
+        <Link 
+          href="/dashboard/profile/share"
+          className="group bg-white p-8 rounded-2xl border border-[var(--border)] hover:border-black transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
+            <span className="text-2xl">🎴</span>
+          </div>
+          <h2 className="font-[family-name:var(--font-syne)] text-xl font-semibold mb-2">
+            Reddit Card
+          </h2>
+          <p className="text-[var(--muted)] text-sm leading-relaxed mb-4">
+            Create shareable profile cards for Reddit & social media.
+          </p>
+          <span className="inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">
+            Create Card
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </span>
+        </Link>
+
         {/* Interview Prep Card - Coming Soon */}
         <div className="bg-white p-8 rounded-2xl border border-[var(--border)] opacity-60">
           <div className="w-14 h-14 bg-[#f5f5f5] rounded-2xl flex items-center justify-center mb-6">
