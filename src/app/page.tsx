@@ -18,7 +18,7 @@ export default function Home() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-black text-white text-xs font-medium px-4 py-2 rounded-full mb-8">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              MBA Writer Now Live
+              Free to Use - No Credit Card Required
             </div>
 
             {/* Main Heading */}
@@ -35,8 +35,8 @@ export default function Home() {
 
             {/* Subheading */}
             <p className="text-lg md:text-xl text-[var(--muted)] max-w-2xl mx-auto mb-12 leading-relaxed">
-              AI-powered tools to craft compelling SOPs, ace interviews, and navigate 
-              your path to top MBA programs. All in one place.
+              The all-in-one platform for MBA aspirants. Build your profile, generate SOPs, 
+              create professional CVs, and share your journey - all powered by AI.
             </p>
 
             {/* CTA Buttons */}
@@ -45,7 +45,7 @@ export default function Home() {
                 href="/register"
                 className="group flex items-center gap-2 bg-black text-white px-8 py-4 rounded-full text-base font-medium hover:bg-black/80 transition-all hover:gap-4"
               >
-                Start Writing Free
+                Get Started Free
                 <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -54,7 +54,7 @@ export default function Home() {
                 href="#features"
                 className="flex items-center gap-2 px-8 py-4 rounded-full text-base font-medium border border-[var(--border)] hover:border-black transition-colors"
               >
-                See How It Works
+                Explore Features
               </Link>
             </div>
 
@@ -84,107 +84,389 @@ export default function Home() {
       <section id="features" className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
-            <span className="text-sm font-medium text-[var(--muted)] uppercase tracking-wider">Why CatHub</span>
+            <span className="text-sm font-medium text-[var(--muted)] uppercase tracking-wider">Features</span>
             <h2 className="font-[family-name:var(--font-syne)] text-4xl md:text-5xl font-bold mt-4 tracking-tight">
-              Everything You Need
+              Everything You Need to Succeed
             </h2>
+            <p className="text-[var(--muted)] text-lg mt-4 max-w-2xl mx-auto">
+              From building your profile to generating application materials - we've got you covered.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Feature 1 */}
-            <div className="group p-8 rounded-3xl border border-[var(--border)] hover:border-black transition-all duration-300 hover:-translate-y-1">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Feature 1 - Profile Builder */}
+            <div className="group p-8 rounded-3xl border border-[var(--border)] hover:border-black transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
-                <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                </svg>
+                <span className="text-2xl">👤</span>
               </div>
-              <h3 className="font-[family-name:var(--font-syne)] text-xl font-semibold mb-3">AI-Powered Writing</h3>
-              <p className="text-[var(--muted)] leading-relaxed">
-                Generate compelling SOPs and essays tailored to your profile and target schools. No more writer's block.
+              <h3 className="font-[family-name:var(--font-syne)] text-xl font-semibold mb-3">Profile Builder</h3>
+              <p className="text-[var(--muted)] leading-relaxed text-sm">
+                Create a comprehensive profile with your academics, work experience, achievements, and career goals.
               </p>
             </div>
 
-            {/* Feature 2 */}
-            <div className="group p-8 rounded-3xl border border-[var(--border)] hover:border-black transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
-                <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
+            {/* Feature 2 - MBA Writer */}
+            <div className="group p-8 rounded-3xl border-2 border-black transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative">
+              <div className="absolute -top-3 right-6 bg-black text-white text-xs font-medium px-3 py-1 rounded-full">
+                Popular
               </div>
-              <h3 className="font-[family-name:var(--font-syne)] text-xl font-semibold mb-3">Smart Suggestions</h3>
-              <p className="text-[var(--muted)] leading-relaxed">
-                Get intelligent recommendations based on successful applications to your dream schools.
+              <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
+                <span className="text-2xl">✍️</span>
+              </div>
+              <h3 className="font-[family-name:var(--font-syne)] text-xl font-semibold mb-3">MBA Writer</h3>
+              <p className="text-[var(--muted)] leading-relaxed text-sm">
+                AI-powered SOP and essay generator tailored to your profile and target B-schools.
               </p>
             </div>
 
-            {/* Feature 3 */}
-            <div className="group p-8 rounded-3xl border border-[var(--border)] hover:border-black transition-all duration-300 hover:-translate-y-1">
+            {/* Feature 3 - CV Creator */}
+            <div className="group p-8 rounded-3xl border border-[var(--border)] hover:border-black transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
-                <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+                <span className="text-2xl">📄</span>
               </div>
-              <h3 className="font-[family-name:var(--font-syne)] text-xl font-semibold mb-3">Lightning Fast</h3>
-              <p className="text-[var(--muted)] leading-relaxed">
-                Generate your first draft in seconds. Iterate and refine until it's perfect.
+              <h3 className="font-[family-name:var(--font-syne)] text-xl font-semibold mb-3">CV Creator</h3>
+              <p className="text-[var(--muted)] leading-relaxed text-sm">
+                Generate professional, ATS-friendly CVs from your profile data in seconds.
+              </p>
+            </div>
+
+            {/* Feature 4 - Reddit Card */}
+            <div className="group p-8 rounded-3xl border border-[var(--border)] hover:border-black transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
+                <span className="text-2xl">🎴</span>
+              </div>
+              <h3 className="font-[family-name:var(--font-syne)] text-xl font-semibold mb-3">Reddit Card</h3>
+              <p className="text-[var(--muted)] leading-relaxed text-sm">
+                Create beautiful shareable profile cards for Reddit, social media, and networking.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Tools Section */}
-      <section id="tools" className="py-32 bg-[#fafafa]">
+      {/* How It Works Section */}
+      <section className="py-32 bg-[#fafafa]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <span className="text-sm font-medium text-[var(--muted)] uppercase tracking-wider">How It Works</span>
+            <h2 className="font-[family-name:var(--font-syne)] text-4xl md:text-5xl font-bold mt-4 tracking-tight">
+              Three Simple Steps
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 relative">
+            {/* Connecting line */}
+            <div className="hidden md:block absolute top-16 left-1/4 right-1/4 h-0.5 bg-[var(--border)]" />
+            
+            {/* Step 1 */}
+            <div className="text-center relative">
+              <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold relative z-10">
+                1
+              </div>
+              <h3 className="font-[family-name:var(--font-syne)] text-xl font-semibold mb-3">Build Your Profile</h3>
+              <p className="text-[var(--muted)] leading-relaxed">
+                Enter your academic background, work experience, achievements, and career aspirations.
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center relative">
+              <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold relative z-10">
+                2
+              </div>
+              <h3 className="font-[family-name:var(--font-syne)] text-xl font-semibold mb-3">Generate Content</h3>
+              <p className="text-[var(--muted)] leading-relaxed">
+                Use our AI tools to create personalized SOPs, essays, and professional CVs instantly.
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center relative">
+              <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold relative z-10">
+                3
+              </div>
+              <h3 className="font-[family-name:var(--font-syne)] text-xl font-semibold mb-3">Apply & Succeed</h3>
+              <p className="text-[var(--muted)] leading-relaxed">
+                Download your materials, refine as needed, and submit confident applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Detailed Tools Section */}
+      <section id="tools" className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
             <span className="text-sm font-medium text-[var(--muted)] uppercase tracking-wider">Our Tools</span>
             <h2 className="font-[family-name:var(--font-syne)] text-4xl md:text-5xl font-bold mt-4 tracking-tight">
-              Built for Success
+              Powerful Tools for Every Step
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* MBA Writer - Active */}
-            <div className="relative group bg-white p-10 rounded-3xl border-2 border-black overflow-hidden">
-              <div className="absolute top-6 right-6 bg-black text-white text-xs font-medium px-3 py-1 rounded-full">
+          {/* Tool 1 - MBA Writer */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-black text-white text-xs font-medium px-3 py-1 rounded-full mb-6">
+                <span className="w-2 h-2 bg-green-400 rounded-full" />
                 Available Now
               </div>
-              <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center mb-8">
-                <span className="text-3xl">✍️</span>
-              </div>
-              <h3 className="font-[family-name:var(--font-syne)] text-2xl font-bold mb-4">MBA Writer</h3>
-              <p className="text-[var(--muted)] leading-relaxed mb-8">
-                Craft compelling SOPs, personal essays, and application responses. Our AI understands what top MBA programs look for.
+              <h3 className="font-[family-name:var(--font-syne)] text-3xl font-bold mb-4">MBA Writer</h3>
+              <p className="text-[var(--muted)] leading-relaxed mb-6">
+                Our flagship AI-powered writing tool generates compelling SOPs and essays tailored specifically 
+                to your profile and target schools. No more staring at blank pages.
               </p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Personalized to your unique background</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Supports all major B-school formats</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Edit and refine with AI assistance</span>
+                </li>
+              </ul>
               <Link 
                 href="/register"
-                className="inline-flex items-center gap-2 text-base font-medium group-hover:gap-4 transition-all"
+                className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-black/80 transition-colors"
               >
-                Try Now
+                Start Writing
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
             </div>
+            <div className="bg-[#fafafa] rounded-3xl p-8 border border-[var(--border)]">
+              <div className="bg-white rounded-2xl p-6 shadow-sm border border-[var(--border)]">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-black rounded-xl flex items-center justify-center">
+                    <span className="text-lg">✍️</span>
+                  </div>
+                  <div>
+                    <div className="font-medium">SOP for IIM Ahmedabad</div>
+                    <div className="text-xs text-[var(--muted)]">Generated just now</div>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="h-3 bg-[#f5f5f5] rounded-full w-full" />
+                  <div className="h-3 bg-[#f5f5f5] rounded-full w-11/12" />
+                  <div className="h-3 bg-[#f5f5f5] rounded-full w-10/12" />
+                  <div className="h-3 bg-[#f5f5f5] rounded-full w-full" />
+                  <div className="h-3 bg-[#f5f5f5] rounded-full w-9/12" />
+                </div>
+              </div>
+            </div>
+          </div>
 
-            {/* Interview Prep - Coming Soon */}
-            <div className="relative group bg-white p-10 rounded-3xl border border-[var(--border)] overflow-hidden opacity-75">
-              <div className="absolute top-6 right-6 bg-[var(--border)] text-[var(--muted)] text-xs font-medium px-3 py-1 rounded-full">
-                Coming Soon
+          {/* Tool 2 - CV Creator */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <div className="order-2 md:order-1 bg-[#fafafa] rounded-3xl p-8 border border-[var(--border)]">
+              <div className="bg-white rounded-2xl p-6 shadow-sm border border-[var(--border)]">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="font-[family-name:var(--font-syne)] font-bold text-lg">John Doe</div>
+                  <div className="text-xs text-[var(--muted)]">PDF Ready</div>
+                </div>
+                <div className="text-xs text-[var(--muted)] mb-4">Software Engineer | 4 Years Experience</div>
+                <div className="space-y-3">
+                  <div>
+                    <div className="text-xs font-medium mb-1">Experience</div>
+                    <div className="h-2 bg-[#f5f5f5] rounded-full w-full" />
+                    <div className="h-2 bg-[#f5f5f5] rounded-full w-10/12 mt-1" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-medium mb-1">Education</div>
+                    <div className="h-2 bg-[#f5f5f5] rounded-full w-9/12" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-medium mb-1">Skills</div>
+                    <div className="flex gap-1">
+                      <div className="h-4 bg-[#f5f5f5] rounded w-12" />
+                      <div className="h-4 bg-[#f5f5f5] rounded w-16" />
+                      <div className="h-4 bg-[#f5f5f5] rounded w-10" />
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="w-16 h-16 bg-[#f5f5f5] rounded-2xl flex items-center justify-center mb-8">
-                <span className="text-3xl">🎯</span>
+            </div>
+            <div className="order-1 md:order-2">
+              <div className="inline-flex items-center gap-2 bg-black text-white text-xs font-medium px-3 py-1 rounded-full mb-6">
+                <span className="w-2 h-2 bg-green-400 rounded-full" />
+                Available Now
               </div>
-              <h3 className="font-[family-name:var(--font-syne)] text-2xl font-bold mb-4">Interview Prep</h3>
-              <p className="text-[var(--muted)] leading-relaxed mb-8">
-                Practice with AI-powered mock interviews. Get real-time feedback and improve your responses for top B-schools.
+              <h3 className="font-[family-name:var(--font-syne)] text-3xl font-bold mb-4">CV Creator</h3>
+              <p className="text-[var(--muted)] leading-relaxed mb-6">
+                Transform your profile into a professional, ATS-friendly CV instantly. 
+                Perfect for MBA applications and job hunting.
               </p>
-              <span className="inline-flex items-center gap-2 text-base font-medium text-[var(--muted)]">
-                Join Waitlist
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Professional templates</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>One-click PDF download</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Auto-populated from your profile</span>
+                </li>
+              </ul>
+              <Link 
+                href="/register"
+                className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-black/80 transition-colors"
+              >
+                Create Your CV
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </span>
+              </Link>
+            </div>
+          </div>
+
+          {/* Tool 3 - Reddit Card */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-black text-white text-xs font-medium px-3 py-1 rounded-full mb-6">
+                <span className="w-2 h-2 bg-green-400 rounded-full" />
+                Available Now
+              </div>
+              <h3 className="font-[family-name:var(--font-syne)] text-3xl font-bold mb-4">Reddit Card</h3>
+              <p className="text-[var(--muted)] leading-relaxed mb-6">
+                Share your MBA profile beautifully on Reddit, LinkedIn, and other platforms. 
+                Perfect for networking and getting advice from the community.
+              </p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Multiple beautiful themes</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Privacy controls - mask your name</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Download as image or share link</span>
+                </li>
+              </ul>
+              <Link 
+                href="/register"
+                className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-black/80 transition-colors"
+              >
+                Create Your Card
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+            <div className="bg-[#fafafa] rounded-3xl p-8 border border-[var(--border)]">
+              <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 text-white">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="font-[family-name:var(--font-syne)] font-bold">Joh*** D**</div>
+                  <div className="text-xs bg-white/20 px-2 py-1 rounded">CAT 2024</div>
+                </div>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <div className="text-white/60 text-xs">Percentile</div>
+                    <div className="font-semibold">99.2</div>
+                  </div>
+                  <div>
+                    <div className="text-white/60 text-xs">Work Ex</div>
+                    <div className="font-semibold">48 months</div>
+                  </div>
+                  <div>
+                    <div className="text-white/60 text-xs">Category</div>
+                    <div className="font-semibold">General</div>
+                  </div>
+                  <div>
+                    <div className="text-white/60 text-xs">Background</div>
+                    <div className="font-semibold">Engineer</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Coming Soon Section */}
+      <section className="py-24 bg-[#fafafa]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <span className="text-sm font-medium text-[var(--muted)] uppercase tracking-wider">Coming Soon</span>
+            <h2 className="font-[family-name:var(--font-syne)] text-3xl md:text-4xl font-bold mt-4 tracking-tight">
+              More Features on the Way
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {/* Interview Prep */}
+            <div className="bg-white p-8 rounded-2xl border border-[var(--border)] opacity-75">
+              <div className="w-12 h-12 bg-[#f5f5f5] rounded-xl flex items-center justify-center mb-4">
+                <span className="text-2xl">🎯</span>
+              </div>
+              <h3 className="font-[family-name:var(--font-syne)] text-lg font-semibold mb-2">Interview Prep</h3>
+              <p className="text-[var(--muted)] text-sm">
+                AI-powered mock interviews with real-time feedback to ace your B-school interviews.
+              </p>
+            </div>
+
+            {/* Essay Review */}
+            <div className="bg-white p-8 rounded-2xl border border-[var(--border)] opacity-75">
+              <div className="w-12 h-12 bg-[#f5f5f5] rounded-xl flex items-center justify-center mb-4">
+                <span className="text-2xl">📝</span>
+              </div>
+              <h3 className="font-[family-name:var(--font-syne)] text-lg font-semibold mb-2">Essay Review</h3>
+              <p className="text-[var(--muted)] text-sm">
+                Get detailed AI feedback on your existing essays and suggestions for improvement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-24 bg-white border-y border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="font-[family-name:var(--font-syne)] text-4xl md:text-5xl font-bold mb-2">100%</div>
+              <div className="text-[var(--muted)]">Free to Use</div>
+            </div>
+            <div>
+              <div className="font-[family-name:var(--font-syne)] text-4xl md:text-5xl font-bold mb-2">4+</div>
+              <div className="text-[var(--muted)]">Powerful Tools</div>
+            </div>
+            <div>
+              <div className="font-[family-name:var(--font-syne)] text-4xl md:text-5xl font-bold mb-2">AI</div>
+              <div className="text-[var(--muted)]">Powered</div>
+            </div>
+            <div>
+              <div className="font-[family-name:var(--font-syne)] text-4xl md:text-5xl font-bold mb-2">24/7</div>
+              <div className="text-[var(--muted)]">Available</div>
             </div>
           </div>
         </div>
@@ -193,26 +475,35 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-32 bg-black text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full grid-pattern" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)' }} />
+          <div className="absolute top-0 left-0 w-full h-full" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
         </div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-[family-name:var(--font-syne)] text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-            Ready to Ace Your
-            <br />MBA Application?
+            Ready to Start Your
+            <br />MBA Journey?
           </h2>
           <p className="text-white/60 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-            Join thousands of students who've used CatHub to get into their dream schools.
+            Join thousands of MBA aspirants using CatHub to build their profiles, 
+            craft compelling applications, and get into their dream schools.
           </p>
-          <Link 
-            href="/register"
-            className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full text-base font-medium hover:bg-white/90 transition-colors"
-          >
-            Get Started Free
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link 
+              href="/register"
+              className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full text-base font-medium hover:bg-white/90 transition-colors"
+            >
+              Get Started Free
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            <Link 
+              href="/login"
+              className="inline-flex items-center gap-2 text-white/80 px-8 py-4 rounded-full text-base font-medium hover:text-white transition-colors"
+            >
+              Already have an account? Sign in
+            </Link>
+          </div>
         </div>
       </section>
 
